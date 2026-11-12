@@ -87,3 +87,11 @@ PATCH 12 NOV 2026 — DESIGN CHALLENGE
 - Menambahkan tombol Ulangi Tantangan.
 - Memperjelas kontras teks pada mode terang dan gelap serta animasi ringan pada kartu dan elemen praktik.
 - script.js tetap identik; kuis, SUS, dan endpoint Apps Script tidak diubah.
+
+PEMBARUAN KONTRAS GUIDED PRACTICE
+- Guided Practice kini menggunakan aturan warna khusus untuk mode terang dan gelap.
+- Label, judul, helper text, dropdown, input, kartu langkah, tip, catatan pembelajaran,
+  Scan Lab, Asset Hunter, dan daftar aset diberi pasangan warna latar/teks yang jelas.
+- Pada mode gelap, panel latihan berubah menjadi gelap dengan teks terang dan input gelap;
+  pada mode terang, panel menggunakan permukaan putih dengan teks gelap.
+- Logika JavaScript tidak diubah pada pembaruan ini.

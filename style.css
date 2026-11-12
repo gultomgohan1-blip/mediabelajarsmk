@@ -2513,3 +2513,154 @@ html:not(.dark) .design-studio-shell .studio-live-dot {
   background:#2B9C62!important;
   box-shadow:0 0 0 4px rgba(43,156,98,.14)!important;
 }
+
+/* ================================================================
+   GUIDED PRACTICE — explicit contrast tokens (light + dark)
+   Scope this patch to the Guided Practice panel so poster controls,
+   step cards and mission text never inherit mismatched theme colors.
+   ================================================================ */
+#studio-guided-panel {
+  --gp-ink:#29283D;
+  --gp-body:#51566B;
+  --gp-muted:#697187;
+  --gp-card:#FFFFFF;
+  --gp-card-soft:#F7F7FC;
+  --gp-line:#E2E4EF;
+  --gp-accent:#4E62D8;
+  --gp-accent-soft:#EEF0FF;
+  --gp-tip:#FFF3D8;
+  --gp-tip-ink:#5B4827;
+  --gp-note:#EEF5DE;
+  --gp-note-ink:#33452D;
+  --gp-result:#E8F6EF;
+  --gp-result-ink:#254B3A;
+}
+#studio-guided-panel .studio-section-heading h4 { color:var(--gp-ink)!important; }
+#studio-guided-panel .studio-section-heading p { color:var(--gp-body)!important; }
+#studio-guided-panel .studio-eyebrow { color:var(--gp-accent)!important; }
+#studio-guided-panel .studio-chapter-tag { color:#8B4B40!important;background:#FFE7DF!important;border:1px solid #F6CFC5!important; }
+#studio-guided-panel .style-preset-card { color:#F8FAFF!important;background:#29334A!important;border:1px solid #46516D!important; }
+#studio-guided-panel .style-preset-card b { color:#FFFFFF!important; }
+#studio-guided-panel .style-preset-card small { color:#D8DEED!important; }
+#studio-guided-panel .style-preset-card.is-selected { background:#354363!important;border-color:#D5F17A!important;box-shadow:0 0 0 3px rgba(213,241,122,.20)!important; }
+#studio-guided-panel .studio-controls {
+  color:var(--gp-ink)!important;background:var(--gp-card)!important;border:1px solid var(--gp-line)!important;
+  box-shadow:0 10px 28px rgba(44,42,76,.08)!important;border-radius:19px!important;
+}
+#studio-guided-panel .studio-step-label { color:var(--gp-ink)!important; }
+#studio-guided-panel .studio-step-label b { color:var(--gp-ink)!important; }
+#studio-guided-panel .studio-step-label small { color:var(--gp-muted)!important; }
+#studio-guided-panel .studio-controls label { color:#34354B!important;font-weight:850!important; }
+#studio-guided-panel .studio-controls input,
+#studio-guided-panel .studio-controls select,
+#studio-guided-panel .studio-controls textarea {
+  color:#25283D!important;background:#F8F8FC!important;border:1px solid #D9DDEB!important;
+  box-shadow:none!important;caret-color:#4E62D8!important;
+}
+#studio-guided-panel .studio-controls input::placeholder,
+#studio-guided-panel .studio-controls textarea::placeholder { color:#70798D!important;opacity:1!important; }
+#studio-guided-panel .studio-controls select option { color:#25283D!important;background:#FFFFFF!important; }
+#studio-guided-panel .studio-controls input:focus,
+#studio-guided-panel .studio-controls select:focus,
+#studio-guided-panel .studio-controls textarea:focus { outline:3px solid rgba(78,98,216,.18)!important;border-color:#4E62D8!important; }
+#studio-guided-panel .studio-field-hint,
+#studio-guided-panel .studio-contrast-note { color:#59647A!important;background:#F0F2FA!important;border:1px solid #E2E5F0!important;border-radius:9px!important;padding:8px 10px!important; }
+#studio-guided-panel .studio-tip { color:var(--gp-tip-ink)!important;background:var(--gp-tip)!important;border:1px solid #F0DDAE!important;border-left:5px solid #E8B94A!important; }
+#studio-guided-panel .studio-tip b { color:#805B17!important; }
+#studio-guided-panel .studio-tip p { color:#5B4827!important; }
+#studio-guided-panel .studio-primary-btn,
+#studio-guided-panel .studio-secondary-btn { color:#FFFFFF!important; }
+#studio-guided-panel .studio-feedback { color:#626A7D!important; }
+#studio-guided-panel .studio-steps-grid > div { background:#F7F7FC!important;border:1px solid #E1E3EF!important; }
+#studio-guided-panel .studio-steps-grid span { color:#4357C6!important; }
+#studio-guided-panel .studio-steps-grid b { color:#29283D!important; }
+#studio-guided-panel .studio-steps-grid small { color:#626C80!important; }
+#studio-guided-panel .studio-learning-note { color:var(--gp-note-ink)!important;background:var(--gp-note)!important;border:1px solid #D6E5B9!important;border-left:5px solid #8EBD4C!important; }
+#studio-guided-panel .studio-learning-note b { color:#3B5D28!important; }
+#studio-guided-panel .studio-learning-note p { color:var(--gp-note-ink)!important; }
+#studio-guided-panel .studio-mission-card { color:var(--gp-ink)!important;background:#FFFFFF!important;border:1px solid #E2E4EF!important;box-shadow:0 8px 24px rgba(44,42,76,.06)!important; }
+#studio-guided-panel .studio-mission-card h5 { color:#29283D!important; }
+#studio-guided-panel .studio-mission-card p { color:#555D72!important; }
+#studio-guided-panel .studio-mission-card label { color:#34354B!important; }
+#studio-guided-panel .studio-mission-card input,
+#studio-guided-panel .studio-mission-card select { color:#25283D!important;background:#F8F8FC!important;border:1px solid #D9DDEB!important; }
+#studio-guided-panel .studio-mission-card input::placeholder { color:#70798D!important;opacity:1!important; }
+#studio-guided-panel .studio-result-box { color:var(--gp-result-ink)!important;background:var(--gp-result)!important;border:1px solid #CFE7DA!important;border-left:5px solid #39A77B!important; }
+#studio-guided-panel .studio-result-box b { color:#176A4B!important; }
+#studio-guided-panel .studio-mission-foot { color:#687187!important; }
+#studio-guided-panel .asset-list li { color:#30364B!important;background:#F1F2F8!important;border-left:4px solid #8D78D8!important; }
+#studio-guided-panel .asset-list li b { color:#29283D!important; }
+#studio-guided-panel .asset-list li span { color:#59647A!important; }
+#studio-guided-panel .asset-list li small,
+#studio-guided-panel .asset-list .asset-empty { color:#5964A8!important; }
+#studio-guided-panel .studio-preview-column { color:#F7F5FF!important;background:#25223B!important;border:1px solid #393451!important; }
+#studio-guided-panel .studio-preview-head b { color:#FFFFFF!important; }
+#studio-guided-panel .studio-preview-head .studio-eyebrow { color:#D8E18B!important; }
+#studio-guided-panel .studio-format { color:#34304C!important;background:#E5EEA8!important; }
+#studio-guided-panel .studio-canvas-toolbar { color:#EBE8F4!important;background:#302D49!important;border:1px solid #514B6C!important; }
+
+/* Dark mode: dark cards receive bright, consistently readable text. */
+html.dark #studio-guided-panel {
+  --gp-ink:#F7F4FC;--gp-body:#D9D8E8;--gp-muted:#BFC2D4;
+  --gp-card:#252A40;--gp-card-soft:#30364E;--gp-line:#454C68;
+  --gp-accent:#BFC9FF;--gp-accent-soft:#343956;
+  --gp-tip:#39344B;--gp-tip-ink:#FFF0C9;
+  --gp-note:#263F3B;--gp-note-ink:#E2F5EC;
+  --gp-result:#253F3A;--gp-result-ink:#E4F6ED;
+}
+html.dark #studio-guided-panel .studio-section-heading h4 { color:#FFF9F1!important; }
+html.dark #studio-guided-panel .studio-section-heading p { color:#E0DDED!important; }
+html.dark #studio-guided-panel .studio-eyebrow { color:#D9E68C!important; }
+html.dark #studio-guided-panel .studio-chapter-tag { color:#FFE4D8!important;background:#513D4A!important;border-color:#745363!important; }
+html.dark #studio-guided-panel .studio-controls { color:#F7F4FC!important;background:#252A40!important;border-color:#454C68!important; }
+html.dark #studio-guided-panel .studio-step-label b,
+html.dark #studio-guided-panel .studio-controls label { color:#F7F4FC!important; }
+html.dark #studio-guided-panel .studio-step-label small { color:#C1C5D8!important; }
+html.dark #studio-guided-panel .studio-controls input,
+html.dark #studio-guided-panel .studio-controls select,
+html.dark #studio-guided-panel .studio-controls textarea,
+html.dark #studio-guided-panel .studio-mission-card input,
+html.dark #studio-guided-panel .studio-mission-card select {
+  color:#F7F5FF!important;background:#171D31!important;border-color:#4B5475!important;color-scheme:dark;
+}
+html.dark #studio-guided-panel .studio-controls input::placeholder,
+html.dark #studio-guided-panel .studio-controls textarea::placeholder,
+html.dark #studio-guided-panel .studio-mission-card input::placeholder { color:#B8BED2!important; }
+html.dark #studio-guided-panel .studio-controls select option,
+html.dark #studio-guided-panel .studio-mission-card select option { color:#F7F5FF!important;background:#171D31!important; }
+html.dark #studio-guided-panel .studio-field-hint,
+html.dark #studio-guided-panel .studio-contrast-note { color:#D7D8E8!important;background:#30364F!important;border-color:#4B5270!important; }
+html.dark #studio-guided-panel .studio-tip { color:#FFF0C9!important;background:#39344B!important;border-color:#5A506D!important;border-left-color:#E8C46B!important; }
+html.dark #studio-guided-panel .studio-tip b { color:#FFE29A!important; }
+html.dark #studio-guided-panel .studio-tip p { color:#F0E8D9!important; }
+html.dark #studio-guided-panel .studio-feedback { color:#D2D3E2!important; }
+html.dark #studio-guided-panel .studio-steps-grid > div { background:#30364F!important;border-color:#4B5270!important; }
+html.dark #studio-guided-panel .studio-steps-grid span { color:#D2DCFF!important; }
+html.dark #studio-guided-panel .studio-steps-grid b { color:#FFFFFF!important; }
+html.dark #studio-guided-panel .studio-steps-grid small { color:#D1D4E4!important; }
+html.dark #studio-guided-panel .studio-learning-note { color:#E2F5EC!important;background:#263F3B!important;border-color:#3E6658!important;border-left-color:#9ACF6B!important; }
+html.dark #studio-guided-panel .studio-learning-note b,
+html.dark #studio-guided-panel .studio-learning-note p { color:#EAF8EF!important; }
+html.dark #studio-guided-panel .studio-mission-card { color:#F7F4FC!important;background:#252A40!important;border-color:#454C68!important; }
+html.dark #studio-guided-panel .studio-mission-card h5 { color:#FFFFFF!important; }
+html.dark #studio-guided-panel .studio-mission-card p { color:#D9D9E8!important; }
+html.dark #studio-guided-panel .studio-mission-card label { color:#F0EFF8!important; }
+html.dark #studio-guided-panel .studio-result-box { color:#E4F6ED!important;background:#253F3A!important;border-color:#3A6957!important;border-left-color:#79C99B!important; }
+html.dark #studio-guided-panel .studio-result-box b { color:#A8E6BE!important; }
+html.dark #studio-guided-panel .studio-mission-foot { color:#C5C8D9!important; }
+html.dark #studio-guided-panel .asset-list li { color:#F0EFF8!important;background:#30364F!important;border-left-color:#BAA4FF!important; }
+html.dark #studio-guided-panel .asset-list li b { color:#FFFFFF!important; }
+html.dark #studio-guided-panel .asset-list li span { color:#D8D9E8!important; }
+html.dark #studio-guided-panel .asset-list li small,
+html.dark #studio-guided-panel .asset-list .asset-empty { color:#C7CFFF!important; }
+html.dark #studio-guided-panel .studio-preview-head .studio-eyebrow { color:#D9E68C!important; }
+html.dark #studio-guided-panel .studio-canvas-toolbar { color:#F0EDF8!important;background:#302D49!important;border-color:#514B6C!important; }
+
+@media (max-width:760px) {
+  #studio-guided-panel .studio-section-heading { flex-direction:column;align-items:flex-start;gap:.6rem; }
+  #studio-guided-panel .studio-workbench { grid-template-columns:1fr!important; }
+  #studio-guided-panel .studio-controls { order:2; }
+  #studio-guided-panel .studio-preview-column { order:1;position:static!important; }
+  #studio-guided-panel .studio-mission-grid { grid-template-columns:1fr!important; }
+  #studio-guided-panel .studio-steps-grid { grid-template-columns:1fr!important; }
+}
