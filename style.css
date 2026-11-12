@@ -2944,3 +2944,169 @@ html.dark .mission-focus-note .mission-focus-icon { background:#414969;color:#D7
 html.dark .mission-focus-note b { color:#FFFFFF; }
 html.dark .mission-focus-note p { color:#E2E3F2; }
 @media(max-width:620px) { .mission-focus-note { padding:13px;gap:10px; } .mission-focus-note p { font-size:.67rem; } }
+
+/* =====================================================================
+   KREASI DKV — PROJECT + MATERIALS CONTRAST AUDIT (FINAL OVERRIDE)
+   Fixes cascading theme collisions inside the project cards and chapter
+   callouts. Keep this block last so inherited shell colors cannot win.
+   ===================================================================== */
+#studio-project-panel {
+  --project-surface:#FFFEFA;
+  --project-surface-soft:#F6F3EC;
+  --project-ink:#292A32;
+  --project-muted:#555D6D;
+  --project-soft-ink:#697184;
+  --project-line:#E2DDD3;
+  --project-note-bg:#F1EDFA;
+  --project-note-ink:#3E3656;
+  color:var(--project-ink)!important;
+}
+html.dark #studio-project-panel {
+  --project-surface:#24283A;
+  --project-surface-soft:#2D334A;
+  --project-ink:#F7F4EC;
+  --project-muted:#D8D9E4;
+  --project-soft-ink:#C2C6D6;
+  --project-line:#4A526B;
+  --project-note-bg:#3A344B;
+  --project-note-ink:#F3ECFA;
+}
+#studio-project-panel .project-brief-card,
+#studio-project-panel .project-rubric-card,
+#studio-project-panel .project-upload-card {
+  color:var(--project-ink)!important;
+  background:var(--project-surface)!important;
+  border:1px solid var(--project-line)!important;
+  box-shadow:0 10px 28px rgba(35,37,58,.07)!important;
+}
+#studio-project-panel .project-brief-card :is(h1,h2,h3,h4,h5,h6,b,strong),
+#studio-project-panel .project-rubric-card :is(h1,h2,h3,h4,h5,h6,b,strong),
+#studio-project-panel .project-upload-card :is(h1,h2,h3,h4,h5,h6,b,strong) {
+  color:var(--project-ink)!important;
+  opacity:1!important;
+}
+#studio-project-panel .project-brief-card :is(p,li,span,small),
+#studio-project-panel .project-rubric-card :is(p,li,span,small),
+#studio-project-panel .project-upload-card :is(p,li,span,small) {
+  color:var(--project-muted)!important;
+  opacity:1!important;
+}
+#studio-project-panel .project-check,
+#studio-project-panel .project-check span,
+#studio-project-panel .project-rubric-card label {
+  color:var(--project-muted)!important;
+  opacity:1!important;
+}
+#studio-project-panel .project-check input { accent-color:#5269ED!important; }
+#studio-project-panel .project-choice-note {
+  color:var(--project-note-ink)!important;
+  background:var(--project-note-bg)!important;
+  border:1px solid var(--project-line)!important;
+  border-radius:12px!important;
+  padding:.8rem!important;
+}
+#studio-project-panel .project-progress-text,
+#studio-project-panel #project-progress-text { color:var(--project-muted)!important;opacity:1!important; }
+#studio-project-panel .project-progress-track { background:var(--project-line)!important; }
+#studio-project-panel .project-progress-track span { background:linear-gradient(90deg,#F07869,#E5B948,#63B88D,#5269ED)!important; }
+#studio-project-panel .project-upload-card :is(input,select,textarea) {
+  color:var(--project-ink)!important;
+  background:var(--project-surface-soft)!important;
+  border:1px solid var(--project-line)!important;
+  -webkit-text-fill-color:var(--project-ink)!important;
+}
+#studio-project-panel .project-upload-card :is(input,textarea)::placeholder {
+  color:var(--project-soft-ink)!important;
+  opacity:1!important;
+  -webkit-text-fill-color:var(--project-soft-ink)!important;
+}
+#studio-project-panel .project-upload-card select option { color:#292A32!important;background:#FFFEFA!important; }
+html.dark #studio-project-panel .project-upload-card select option { color:#292A32!important;background:#FFFEFA!important; }
+
+/* Keep the project panel's own heading and supporting text independent
+   from the outer design-studio shell's global h4/p colors. */
+#studio-project-panel > .studio-section-heading h4 { color:#29243D!important; }
+#studio-project-panel > .studio-section-heading p { color:#55536B!important; }
+#studio-project-panel > .studio-section-heading .studio-eyebrow { color:#4D5CC7!important; }
+html.dark #studio-project-panel > .studio-section-heading h4 { color:#FFF8EF!important; }
+html.dark #studio-project-panel > .studio-section-heading p { color:#E5DDED!important; }
+html.dark #studio-project-panel > .studio-section-heading .studio-eyebrow { color:#D9DFFF!important; }
+
+/* Material chapter subcomponents that previously retained dark-theme
+   colors while their card surfaces changed to dark backgrounds. */
+html.dark .discussion-panel .discussion-highlight,
+html.dark .discussion-panel .discussion-highlight :is(b,strong,span,small,li) {
+  color:#F5F2E9!important;
+}
+html.dark .discussion-panel .lesson-check,
+html.dark .discussion-panel .lesson-check :is(b,strong,span,small,li) {
+  color:#E9F6F1!important;
+}
+html.dark .chapter-swatch-heading { color:#D8D2E5!important; }
+html.dark .chapter-swatch-card > span { color:#D2C9FF!important; }
+html.dark .chapter-swatch-card small { color:#E0DBE9!important; }
+html.dark .chapter-swatch-image.image-failed::after { color:#F3EEFA!important; }
+html.dark .image-usage-note { color:#E0DBE8!important;background:#303149!important;border:1px solid #4C4963!important; }
+html.dark .chapter-completion-bar b,
+html.dark .chapter-completion-bar small,
+html.dark .chapter-completion-bar .completion-overline { color:#F2F0F8!important; }
+html.dark .mark-chapter-btn { color:#FFFFFF!important;background:#465BD5!important; }
+html.dark .mark-chapter-btn.is-done { color:#E5F8EE!important;background:#285744!important; }
+
+/* Tables use white lettering on the saturated blue header in both themes. */
+.lesson-table th,
+html.dark .lesson-table th { color:#FFFFFF!important;background:#465ED8!important; }
+.lesson-table td { color:#292A32!important; }
+.lesson-table tbody tr { background:#FFFEFA!important; }
+.lesson-table tbody tr:nth-child(even) { background:#FFF4E8!important; }
+html.dark .lesson-table td { color:#F4F0E8!important; }
+html.dark .lesson-table tbody tr { background:#24283A!important; }
+html.dark .lesson-table tbody tr:nth-child(even) { background:#30364B!important; }
+
+/* Material card titles, body copy, inline labels and links get explicit
+   theme-safe colors even when nested inside differently colored cards. */
+html:not(.dark) .discussion-panel :is(p,li,dd,dt) { color:#343441!important; }
+html:not(.dark) .discussion-panel > p:first-of-type { color:#5E5C68!important; }
+html.dark .discussion-panel :is(p,li,dd,dt) { color:#F0EDF5!important; }
+html.dark .discussion-panel > p:first-of-type { color:#D5D1DF!important; }
+html.dark .discussion-panel h3,
+html.dark .discussion-panel h4 { color:#FAF7F0!important; }
+html.dark .discussion-panel h5 { color:#D0D8FF!important; }
+html.dark .discussion-panel .discussion-card :is(h5,b,strong,span,small) { color:#F4F0FA!important; }
+html:not(.dark) .discussion-panel .discussion-card :is(h5,b,strong,span,small) { color:#343144!important; }
+html.dark .chapter-visual figcaption,
+html.dark .chapter-visual figcaption span { color:#F0EAF7!important; }
+html.dark .chapter-visual figcaption a { color:#C5D0FF!important; }
+html.dark .chapter-swatch-card { color:#F0EDF7!important; }
+html.dark .chapter-swatch-card :is(b,strong) { color:#FFFFFF!important; }
+html.dark .tab-panel .lesson-summary { color:#F2EFF8!important;background:#343149!important;border-color:#504A66!important; }
+html.dark .tab-panel .lesson-summary :is(b,strong,span,small) { color:#F2EFF8!important; }
+
+/* Explicit focus and hover states remain readable in both themes. */
+#studio-project-panel :is(button,a,input,select,textarea):focus-visible,
+.discussion-panel :is(button,a,input,select,textarea):focus-visible {
+  outline:3px solid #5269ED!important;
+  outline-offset:3px!important;
+}
+
+/* Dark chapter cards need dark surfaces too: chapter-specific light
+   pastel backgrounds otherwise outrank the generic dark-theme rule. */
+html.dark #tab-1 .discussion-card,
+html.dark #tab-2 .discussion-card,
+html.dark #tab-3 .discussion-card,
+html.dark #tab-4 .discussion-card,
+html.dark #tab-5 .discussion-card {
+  color:#F4F0FA!important;
+  background:#302C4B!important;
+  border-color:#49435F!important;
+}
+html.dark #tab-2 .discussion-card :is(h5,p,li,b,strong,span,small),
+html.dark #tab-3 .discussion-card :is(h5,p,li,b,strong,span,small),
+html.dark #tab-4 .discussion-card :is(h5,p,li,b,strong,span,small),
+html.dark #tab-5 .discussion-card :is(h5,p,li,b,strong,span,small) {
+  color:#F0EDF7!important;
+}
+#studio-project-panel .project-brief-card .project-choice-note {
+  color:var(--project-note-ink)!important;
+  background:var(--project-note-bg)!important;
+}
