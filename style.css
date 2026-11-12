@@ -2829,3 +2829,118 @@ html.dark .fix-task-feedback.is-success{background:#26473a;color:#c7f8d8}html.da
 @media(max-width:1000px){.fix-mission-grid{grid-template-columns:1fr}.fix-poster-comparison{max-width:650px}.fix-decision-column{max-width:760px}}
 @media(max-width:620px){.mission-featured-card-fix{grid-template-columns:1fr}.mission-featured-card-fix .mission-featured-side{min-height:210px}.fix-mission-panel{padding:13px;border-radius:18px;margin-top:16px}.fix-mission-topbar{align-items:flex-start;flex-direction:column}.fix-mission-label{font-size:.53rem}.fix-mission-hero{grid-template-columns:1fr;padding:18px 15px;border-radius:17px}.fix-mission-hero h4{font-size:2.65rem}.fix-mission-hero-copy>p{font-size:.78rem}.fix-hero-orbit{min-height:135px}.fix-orbit-ring{width:135px;height:135px}.fix-orbit-ring.ring-two{width:102px;height:102px}.fix-orbit-sticker{width:78px;height:78px;font-size:1.2rem;border-radius:22px}.fix-spark{font-size:1.2rem}.fix-mission-grid{gap:15px;margin-top:16px}.fix-poster-comparison{gap:7px}.fix-poster-card{padding:7px;border-radius:11px}.fix-poster-art{min-height:200px;padding:9px}.bad-poster-title{font-size:1.48rem}.after-title{font-size:1.42rem}.fix-poster-card-top span{font-size:.44rem}.fix-poster-caption{font-size:.55rem}.fix-task-card{padding:10px}.fix-task-heading small{font-size:.57rem}.fix-choice-button{padding:7px;gap:7px}.fix-choice-button b{font-size:.61rem}.fix-choice-button small{font-size:.53rem}.fix-swatch,.fix-type-sample,.fix-layout-sample{flex-basis:40px;height:38px}.fix-progress-steps span{font-size:.48rem}.fix-mission-footer{align-items:flex-start;flex-direction:column}.fix-mission-footer button{width:100%}}
 @media(prefers-reduced-motion:reduce){.fix-mission-panel,.fix-orbit-ring,.fix-orbit-sticker,.fix-spark,.fix-card-bad-poster,.fix-live-pill i,.fix-confetti i,.fix-complete-icon,.fix-task-feedback.is-fresh,.fix-choice-button.is-wrong-answer{animation:none!important}.fix-choice-button,.fix-back-button,.fix-progress-track span{transition:none!important}}
+
+
+/* ================================================================
+   KREASI DKV — PORTFOLIO CONTRAST REPAIR
+   Scoped colors: prevent text/background collisions in both themes.
+   ================================================================ */
+#studio-project-panel #portfolio-hub {
+  --pf-card-bg:#FFFFFF;
+  --pf-card-bg-soft:#F5F6FB;
+  --pf-text:#20253A;
+  --pf-text-muted:#535D73;
+  --pf-text-soft:#667188;
+  --pf-border:#DCE1EC;
+  background:var(--pf-card-bg)!important;
+  color:var(--pf-text)!important;
+  border-color:var(--pf-border)!important;
+}
+html.dark #studio-project-panel #portfolio-hub {
+  --pf-card-bg:#20263A;
+  --pf-card-bg-soft:#2A3249;
+  --pf-text:#FFFFFF;
+  --pf-text-muted:#E0E5F1;
+  --pf-text-soft:#C5CDDF;
+  --pf-border:#46516D;
+  background:var(--pf-card-bg)!important;
+  color:var(--pf-text)!important;
+}
+#studio-project-panel #portfolio-hub,
+#studio-project-panel #portfolio-hub * { box-sizing:border-box; }
+#studio-project-panel #portfolio-hub h5,
+#studio-project-panel #portfolio-hub b,
+#studio-project-panel #portfolio-hub strong,
+#studio-project-panel #portfolio-hub label:not(.portfolio-file-picker),
+#studio-project-panel #portfolio-hub .portfolio-gallery-heading > div b,
+#studio-project-panel #portfolio-hub .portfolio-work-info b,
+#studio-project-panel #portfolio-hub .portfolio-empty-preview b,
+#studio-project-panel #portfolio-hub #portfolio-pdf-preview b {
+  color:var(--pf-text)!important;
+}
+#studio-project-panel #portfolio-hub p,
+#studio-project-panel #portfolio-hub small,
+#studio-project-panel #portfolio-hub .portfolio-preview-label,
+#studio-project-panel #portfolio-hub .portfolio-gallery-heading > span,
+#studio-project-panel #portfolio-hub .portfolio-work-info small,
+#studio-project-panel #portfolio-hub .portfolio-empty-preview small,
+#studio-project-panel #portfolio-hub .portfolio-system-status,
+#studio-project-panel #portfolio-hub #portfolio-file-status {
+  color:var(--pf-text-muted)!important;
+  opacity:1!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-form-fields input,
+#studio-project-panel #portfolio-hub .portfolio-form-fields select,
+#studio-project-panel #portfolio-hub .portfolio-form-fields textarea {
+  color:var(--pf-text)!important;
+  background:var(--pf-card-bg-soft)!important;
+  border-color:var(--pf-border)!important;
+  -webkit-text-fill-color:var(--pf-text)!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-form-fields input::placeholder,
+#studio-project-panel #portfolio-hub .portfolio-form-fields textarea::placeholder {
+  color:var(--pf-text-soft)!important;opacity:1!important;-webkit-text-fill-color:var(--pf-text-soft)!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-form-fields select option {
+  color:#20253A!important;background:#FFFFFF!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-file-picker {
+  color:#23345F!important;background:#E8EDFF!important;border-color:#8798D8!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-file-picker b { color:#23345F!important; }
+#studio-project-panel #portfolio-hub .portfolio-file-picker small { color:#46577F!important; }
+html.dark #studio-project-panel #portfolio-hub .portfolio-file-picker {
+  color:#F4F6FF!important;background:#303B5D!important;border-color:#7F91D7!important;
+}
+html.dark #studio-project-panel #portfolio-hub .portfolio-file-picker b { color:#FFFFFF!important; }
+html.dark #studio-project-panel #portfolio-hub .portfolio-file-picker small { color:#E1E7FF!important; }
+#studio-project-panel #portfolio-hub .portfolio-preview-stage,
+#studio-project-panel #portfolio-hub .portfolio-work-card,
+#studio-project-panel #portfolio-hub .portfolio-gallery-empty,
+#studio-project-panel #portfolio-hub .portfolio-empty-preview {
+  color:var(--pf-text)!important;background:var(--pf-card-bg-soft)!important;border-color:var(--pf-border)!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-preview-label { color:var(--pf-text-soft)!important; }
+#studio-project-panel #portfolio-hub .portfolio-work-actions button {
+  color:var(--pf-text)!important;background:var(--pf-card-bg)!important;border-color:var(--pf-border)!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-work-actions button:hover,
+#studio-project-panel #portfolio-hub .portfolio-work-actions button:focus-visible {
+  color:#FFFFFF!important;background:#405BD6!important;border-color:#405BD6!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-save-btn { color:#FFFFFF!important;background:#354FC4!important; }
+#studio-project-panel #portfolio-hub .portfolio-submit-btn { color:#164B37!important;background:#BDEBD3!important; }
+#studio-project-panel #portfolio-hub .portfolio-submit-btn:disabled { color:#52605A!important;background:#DCE8E1!important;opacity:1!important; }
+html.dark #studio-project-panel #portfolio-hub .portfolio-submit-btn:disabled { color:#C2D4C9!important;background:#344C42!important;opacity:1!important; }
+#studio-project-panel #portfolio-hub #portfolio-pdf-preview { color:var(--pf-text)!important; }
+#studio-project-panel #portfolio-hub #portfolio-pdf-preview a { color:#3158DD!important; }
+html.dark #studio-project-panel #portfolio-hub #portfolio-pdf-preview a { color:#B9C8FF!important; }
+#studio-project-panel #portfolio-hub .portfolio-teacher-note {
+  color:#483713!important;background:#FFF0C9!important;border-color:#E9CF85!important;
+}
+#studio-project-panel #portfolio-hub .portfolio-teacher-note b { color:#382A0C!important; }
+html.dark #studio-project-panel #portfolio-hub .portfolio-teacher-note {
+  color:#F7EED7!important;background:#403A2D!important;border-color:#716143!important;
+}
+html.dark #studio-project-panel #portfolio-hub .portfolio-teacher-note b { color:#FFFFFF!important; }
+
+/* Two-mission focus note: no inactive mission cards are shown. */
+.mission-focus-note { display:flex;align-items:flex-start;gap:13px;margin-top:16px;padding:16px 18px;border:1px solid #DCE3F4;border-radius:17px;background:linear-gradient(110deg,#EEF2FF,#FFF2E9 58%,#E9F7F0);color:#29314D; }
+.mission-focus-icon { flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:#FFFFFF;color:#405BD6;font-size:1.2rem;box-shadow:0 4px 14px rgba(54,72,145,.10); }
+.mission-focus-note b { display:block;color:#202744;font-size:.82rem;font-weight:950; }
+.mission-focus-note p { margin:4px 0 0;color:#4E5871;font-size:.7rem;line-height:1.6; }
+html.dark .mission-focus-note { background:linear-gradient(110deg,#292E4A,#403047 58%,#24413D);border-color:#4B5273;color:#F5F3FF; }
+html.dark .mission-focus-note .mission-focus-icon { background:#414969;color:#D7DFFF; }
+html.dark .mission-focus-note b { color:#FFFFFF; }
+html.dark .mission-focus-note p { color:#E2E3F2; }
+@media(max-width:620px) { .mission-focus-note { padding:13px;gap:10px; } .mission-focus-note p { font-size:.67rem; } }
